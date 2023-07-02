@@ -1,0 +1,99 @@
+$white: #EEE;
+$disabled: #999;
+$shadowinverse: #abf570;
+$inverse: #c6fa9d;
+$blue: #4c5270;
+$shadowBlue: #343952;
+
+/* https://fonts.google.com/specimen/Assistant -- OPEN USE LICENSE*/
+@font-face {
+  font-family: "Assistant";
+  src: local("Assistant"), url("./fonts/Assistant/Assistant-VariableFont_wght.ttf") format('truetype');
+}
+
+$font: Helvetica, sans-serif;
+$assistFont: Assistant, sans-serif;
+
+
+.heading{
+    color: $inverse;
+}
+
+$containerWidth: 100%;
+
+.buffered_container{
+    margin: 15% auto;
+    width: $containerWidth;
+}
+  
+/* text style/ positioning */
+.landing_div {
+    text-align: left;
+    align-self: center;
+    font-size: larger;
+
+    max-width: $containerWidth - 50%;
+    margin: 0 auto 0 auto;
+
+}
+/* subtext style and animation */
+.typing_animation{
+
+    display:inline-flex;
+    overflow: hidden;
+    white-space: nowrap;    
+    width: 0;
+    max-width: 37rem;   
+
+    padding-bottom: 1%;
+    margin: 0 auto;
+    border-right: 2px solid;    
+    animation: type 1.5s steps(39, end) 0.2s forwards, cursor 1s infinite;
+}
+
+/* typing scroll and cursor blink */
+@keyframes type{
+    from{width: 0;}
+    to{width: 100%;}
+  }
+@keyframes cursor{
+    0% {border-right-color: transparent;}
+    50% {border-right-color: $white;}
+    100% {border-right-color: transparent;}
+}
+
+@media(min-width: 2561px){
+  .typeAnim{
+      max-width: 35rem;
+  }
+}
+
+@media(max-width: 1900px){
+  .typeAnim{
+      max-width: 40rem;
+  }
+
+}
+
+/* stops animation getting cut off */
+@media(max-width:1200px){
+  .animDiv{
+      max-width: 80%;
+  }
+}
+
+/* stops animation and some styling entirely on small screens */
+@media(max-width:640px){
+  .typeAnim{
+      text-align: left;
+      animation: none;
+      display: block;
+      width: 100%;
+      white-space: normal;
+      border: none;
+  }
+}
+
+.subtext{
+    font-weight: 400;
+}

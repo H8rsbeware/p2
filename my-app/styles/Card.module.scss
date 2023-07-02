@@ -1,0 +1,71 @@
+
+$white: #EEE;
+$disabled: #999;
+$shadowinverse: #abf570;
+$inverse: #c6fa9d;
+$blue: #4c5270;
+$shadowBlue: #343952;
+
+$hoverBlue: #46415b;
+
+
+/* https://fonts.google.com/specimen/Assistant -- OPEN USE LICENSE*/
+@font-face {
+    font-family: "Assistant";
+    src: local("Assistant"), url("./fonts/Assistant/Assistant-VariableFont_wght.ttf") format('truetype');
+  }
+  
+$font: Helvetica, sans-serif;
+$assistFont: Assistant, sans-serif;
+
+
+.card_heading{
+    color:$shadowinverse;
+    font-size: 25px;
+}
+  
+.horz_rule{
+    padding: 10px none;
+}
+
+.card_container{
+    padding-top: 1%;
+    
+    margin: 0 auto;
+    text-justify: distribute-all-lines;
+    background-color: $shadowBlue;
+    letter-spacing: normal;
+    border-radius: 2%;
+}
+
+.internal_card_container{
+    padding: 2%;
+}
+
+.card_container:hover{
+    background-color: $hoverBlue;
+}
+
+.card_tags{
+    font-weight: 650;
+    font-size: 19px;
+    color: $white;
+    padding-bottom: 3%;
+}
+
+.card_image{
+    border-radius: 5%;
+    position: static !important;
+
+}
+
+.card_text_area{
+
+}
+
+.card_disc{
+    padding: 3% 1.5%;
+    font-size: 14px;
+    font-family:sans-serif;
+}
+

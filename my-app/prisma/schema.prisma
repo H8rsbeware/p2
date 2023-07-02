@@ -1,0 +1,21 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model card{
+  id      Int       @id @default(autoincrement())
+  name    String    
+  disc    String
+  img     String
+  url     String
+  // Tags are an array, seperated by comma values, SQLite doesnt support primitive arrays.
+  tags    String
+}

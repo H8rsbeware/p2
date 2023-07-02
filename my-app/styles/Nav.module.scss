@@ -1,0 +1,60 @@
+
+$white: #EEE;
+$disabled: #999;
+$shadowinverse: #abf570;
+$inverse: #c6fa9d;
+$blue: #4c5270;
+$shadowBlue: #343952;
+
+
+/* https://fonts.google.com/specimen/Assistant -- OPEN USE LICENSE*/
+@font-face {
+    font-family: "Assistant";
+    src: local("Assistant"), url("./fonts/Assistant/Assistant-VariableFont_wght.ttf") format('truetype');
+  }
+  
+$font: Helvetica, sans-serif;
+$assistFont: Assistant, sans-serif;
+  
+
+.nav{
+    position: fixed;
+    width: 100%;
+    background: $shadowBlue;
+    top: 0%;
+    left: 0%;
+    padding: 1.5%;
+    font: 110% $assistFont;
+    font-weight: 550;
+}
+
+.nav_container{
+    display: inline;
+}
+
+.nav_item {
+    display: inline;
+    list-style: none;
+}
+
+.nav_item_link {
+    color: $white;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.nav_item_link:hover{
+    color: $disabled
+}
+
+
+
+.active{
+    color: $inverse;
+    text-decoration: none;
+    padding: 0 15px;
+}
+.active:hover{
+    color: $inverse !important;
+    cursor: default;
+}
